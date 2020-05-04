@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="manifest" href="Images/site.webmanifest">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/develops.css">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <!---->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <title>Enexius</title>
+
+    <script src="https://js.squareup.com/v2/paymentform"></script>
+    <link rel="stylesheet" type="text/css" href="css/develops.css">
+    <script>
+        const SQUAREUP_APPLICATION_ID = '<%= SQUAREUP_APPLICATION_ID %>';
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="Images/LogoEnexius3.jpeg" class="logo-brand" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="icon ion-md-menu"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" id="inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="Nosotros.html" id="nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="donacion.html" id="">Donación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#contactanos" id="nosotros">Contactanos</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Modulo de pago (Paypal)-->
+    <div class="container">
+
+    <div style="width: 60%; position: relative;top: 150px;margin-left: 20%; padding-left: 25%;">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_donations" />
+            <input type="hidden" name="business" value="enexius20@gmail.com" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <input  class="paypal" type="image" src="images/PayPal.png" border="0" width="20%" height="40%" name="submit"
+                title="Donar con PayPal" alt="Donate with PayPal button" />
+            <img alt="" border="0" src="https://www.paypal.com/en_DO/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+    </div>
+
+    <!--Boton de donar (procesadora de pago incluida) ESTA ES LA DE SQUAREUP (API) -->
+    <div class="input-group mb-3 " id="input"
+        style="width: 60%; position: relative;top: 80px;margin-left: 10%; padding-left: 25%; ">
+        
+        <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+        </div>
+        <input type="text" id="input-cantidad" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <div class="input-group-append">
+        </div>
+    </div>
+    <div id="form-container2">
+        <div id="sq-card"></div>
+        <button id="sq-creditcard" class="button2-credit2-card2"
+            title="Donar con Tarjeta Visa, Mastercard, AmericanExpress, u otras...">Donar con otros</button>
+
+    </div>
+
+    </div>
+    
+<!--final-->
+
+    <section id="footer" class="bg-dark">
+        <div class="container">
+            <img src="Images/LogoEnexius.png" class="logo-brand" alt="logo">
+            <ul class="list-inline" style="position: relative;left: 15px;">
+                <li class="list-inline-item footer-menu"><a href="index.html"> Inicio</a></li>
+                <li class="list-inline-item footer-menu"><a href="Nosotros.html"> Nosotros</a></li>
+                <li class="list-inline-item footer-menu"><a href="donacion.html"> Donación</a></li>
+            </ul>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="https://www.instagram.com/enexius20/" target="_blank"><i
+                            class="icon ion-logo-instagram"></i></a></li>
+
+            </ul>
+            <small>© pagina creada por los estudiantes del tecnico de informatica</small>
+
+        </div>
+    </section>
+    <script src="js/payment_form.js"></script>
+
+</body>
+
+</html>
